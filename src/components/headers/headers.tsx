@@ -1,4 +1,5 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { ThemeToggle } from '@/components/ui/theme-toggle';
 
 export default function Header({
   children,
@@ -14,7 +15,10 @@ export default function Header({
                     </svg>
                     <span className="font-bold text-xl">Web3 DApp</span>
                 </div>
-                <div>
+                <div className="flex items-center space-x-4">
+                    <div className="bg-white/10 rounded-full p-1">
+                        <ThemeToggle />
+                    </div>
                     <ConnectButton />
                 </div>
             </header>
