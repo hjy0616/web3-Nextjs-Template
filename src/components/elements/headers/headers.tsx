@@ -7,7 +7,7 @@ export default function Header({
   children: React.ReactNode
 }){
     return (
-        <div className="flex flex-col w-full">
+        <>
             <header className='sticky top-0 z-50 w-full p-4 flex justify-between items-center bg-gradient-to-r from-gray-800 to-gray-900 text-white shadow-md'>
                 <div className="flex items-center space-x-2">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
@@ -22,9 +22,7 @@ export default function Header({
                     <ConnectButton />
                 </div>
             </header>
-            <main className="flex-1 w-full">
-                {children}
-            </main>
-        </div>
+            {children}
+        </>
     )
 }

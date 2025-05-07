@@ -1,6 +1,7 @@
 "use client";
 import '@rainbow-me/rainbowkit/styles.css';
 import Header from '../headers/headers';
+import Footers from '../footers/footer';
 
 import {
   getDefaultConfig,
@@ -36,11 +37,14 @@ export default function RootLayout({
       <QueryClientProvider client={queryClient}>
         <WagmiProvider config={config}>
           <RainbowKitProvider>
-            <Header>
-              <div>
-                {children}
-              </div>
-            </Header>
+            <div className="flex flex-col min-h-screen">
+              <Header>
+                <main className="flex-1">
+                  {children}
+                </main>
+              </Header>
+              <Footers />
+            </div>
           </RainbowKitProvider>
         </WagmiProvider>
       </QueryClientProvider>
